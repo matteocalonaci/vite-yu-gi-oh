@@ -1,7 +1,9 @@
 <script>
 export default {
     name: "SingleCard",
-    props: ["dati"],
+    props: {
+        card: Object
+    },
     data() {
         return {
 
@@ -12,10 +14,10 @@ export default {
 <template>
     <div class="card col-2 myBg">
         <div class="img bg-warning">
-            <img :src="dati.card_images[0].image_url" alt="Card image">
+            <img :src="card.card_images[0].image_url" alt="">
         </div>
-        <h5 class=" text-center text-white p-2">{{ dati.name }}</h5>
-        <p class=" text-center text-white p-2">{{ dati.archetype }}</p>
+        <h5 class=" text-center text-white p-2">{{ card.name }}</h5>
+        <p class=" text-center text-white p-2">{{ card.archetype }}</p>
 
     </div>
 </template>
@@ -23,7 +25,7 @@ export default {
 <!-- CSS -->
 <style scoped>
 .col-2 {
-    width: calc(100% / 3.5 - 8rem);
+    width: calc((100% - 5rem) / 5);
     margin-bottom: 1rem;
     padding: 0.0001rem 0;
 }
