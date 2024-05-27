@@ -15,7 +15,9 @@ export default {
 
 <!-- HTML -->
 <template>
-    header
+    <header>
+        <h1>Yu-Gi-Oh Api</h1>
+    </header>
 
 </template>
 
