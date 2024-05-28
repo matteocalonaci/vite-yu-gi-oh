@@ -174,7 +174,9 @@ const iMieiDati = reactive({
     //     },
     // ]
 
-    cards:[]
+    cards:[],
+    archetypeList :[]
+
 });
 
 export default iMieiDati;

@@ -2,7 +2,6 @@
 <script>
 import SingleCard from "./SingleCard.vue";
 import store from '../data/store.js';
-import axios from 'axios';
 
 console.log(store)
 export default {
@@ -10,25 +9,14 @@ export default {
     components: {
         SingleCard
     },
+
     data() {
         return {
             store
         }
 
     },
-    mounted() {
-        axios
-            .get(
-                "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=15"
-            )
-            .then((risultato) => {
-                this.store.cards = risultato.data.data;
-                console.log(risultato.data.result)
 
-            });
-        console.log('mounted', this.store.cards)
-
-    }
 
 
 }
@@ -38,6 +26,7 @@ export default {
 <!-- HTML -->
 <template>
     <main>
+        <!-- NON FUNZIONE PROBABILMENTE IMPORTATO NON COMPATIBILE CON LINK BOOTSTRAP -->
         <!-- <div class="container">
             <div class="row">
                 <div class="input-group mb-3">
@@ -55,7 +44,9 @@ export default {
                 </div>
             </div>
         </div> -->
-        <div class="container-fluid">
+
+        <!-- SPOSTATA IN APP.VUE -->
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-1 py-4">
@@ -69,7 +60,7 @@ export default {
                     </select>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container bg-white p-5">
 
             <div class="container">
