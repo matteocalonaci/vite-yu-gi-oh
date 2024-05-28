@@ -1,3 +1,5 @@
+DAY 1
+
 CONSEGNA
 Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout come da screenshot allegato.
 
@@ -26,3 +28,36 @@ L'api da richiamare si trova qui.
 BONUS #2
 L'indirizzo che vi ho fornito stampa solo le prime 10 carte. Se volessi visualizzare le prime 20 carte? Oppure le prime 20 carte a partire dalla 15esima? Guardate bene l'indirizzo e fate qualche prova :occhiolino:
 Qui trovate anche la documentazione delle API se volete capire bene quali dati aspettarvi.
+
+
+
+
+
+
+---------------------------------------------
+DAY 2
+
+CONSEGNA
+Continuate a lavorare nella stessa repo di ieri. Oggi gli obiettivi sono:
+richiamare le card tramite axios (per chi non avesse fatto il bonus di ieri)
+aggiungere una select per filtrare i risultati in base all’archetipo
+
+
+MILESTONE 0
+Assicuratevi di aver completato la consegna di ieri inclusi i bonus: dovrete avere le cards all'interno di un array dello store. Questo array va popolato grazie ad una chiamata axios fatta al caricamento di App.vue.
+
+MILESTONE 1
+Aggiungete una select in pagina per scegliere l'archetipo.
+La select dovrà essere direttamente in App.vue e non in un componente. 
+Le options della select verranno popolate dinamicamente, grazie a un array contenente tutti gli archetipi.
+Dove prendo gli archetipi? Con un'altra chiamata, sempre al caricamento di App.vue ma a questo endpoint. I dati vanno sempre nello store.
+
+
+MILESTONE 2
+Quando l'utente seleziona un valore dalla lista, dovrete aggiornare la lista di cards che avete in store.
+Vuol dire che effettuerete una chiamata alle API (simile a quella iniziale) ma con l'archetipo selezionato.
+
+--------------------BONUS-------------------
+
+BONUS
+Creare un componente che mostri il numero totale di risultati ottenuti.
