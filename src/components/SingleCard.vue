@@ -1,4 +1,6 @@
 <script>
+import store from '../data/store.js';
+
 export default {
     name: "SingleCard",
     props: {
@@ -37,6 +39,7 @@ export default {
 }
 
 .myBg {
-    background-color: rgb(212, 143, 56);
+    background-color: orange;
+    /* background-color: rgb(212, 143, 56); */
 }
 </style>
