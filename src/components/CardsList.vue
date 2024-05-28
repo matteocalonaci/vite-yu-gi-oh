@@ -2,6 +2,8 @@
 <script>
 import SingleCard from "./SingleCard.vue";
 import store from '../data/store.js';
+import axios from 'axios';
+
 console.log(store)
 export default {
     name: "CardsList",
@@ -17,10 +19,12 @@ export default {
     mounted() {
         axios
             .get(
-                "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
+                "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=15"
             )
             .then((risultato) => {
                 this.store.cards = risultato.data.data;
+                console.log(risultato.data.result)
+
             });
         console.log('mounted', this.store.cards)
 
