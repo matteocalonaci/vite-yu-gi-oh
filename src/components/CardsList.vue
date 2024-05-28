@@ -65,7 +65,7 @@ export default {
 
             <div class="container">
                 <div class="row bg-black">
-                    <span class="text-white p-3">Found 39 cards</span>
+                    <span class="text-white p-3">Found {{ store.cards.length }} cards</span>
                 </div>
                 <div class="row d-flex justify-content-between min-height ">
                     <SingleCard v-for="card in store.cards" :card="card" />
